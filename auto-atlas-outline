@@ -1,0 +1,27 @@
+thoughts
+- two emails (for each type of lddmm)
+- pull info out of text in retrieved data
+- 
+I. Skull Stripping
+ss_dti.sh
+
+After skull stripping:
+
+distcorr_1_prep_1ch.sh
+distcorr_2_send_1ch.sh
+distcorr_3_retrieve_1ch.sh
+distcorr_4_finish_1ch.sh
+
+linear_and_inverse_generation.sh
+
+nonlinear_1_prep_multich.sh
+nonlinear_2_send_multich.sh
+nonlinear_3_retrieve_multich.sh
+nonlinear_4_finish_multich.sh
+****
+
+rev_trans_compose.sh
+
+rev_trans_apply.sh
+
+generate_stats.sh
