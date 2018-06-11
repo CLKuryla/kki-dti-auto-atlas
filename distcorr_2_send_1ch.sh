@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Colleen's original script: T:\amri\DTIanalysis\fsl\scripts
+# Colleen's original script: T:\amri\DTIanalysis\fsl\scripts\setup_lddmm_send.sh
 
 # Takes no parameters. Run in a directory with:
 # Template.img Template.hdr Target.img Target.hdr identity.txt LocalAddress.txt lddmm.conf
