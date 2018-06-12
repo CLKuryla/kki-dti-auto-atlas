@@ -1,7 +1,9 @@
 thoughts
 - two emails (for each type of lddmm)
-- pull info out of text in retrieved data
-- 
+- pull info out of text in retrieved data (from "local address")
+    - subject id
+    - whether it is from the distortion correction step or from the registration step
+
 I. Skull Stripping
 ss_dti.sh
 
