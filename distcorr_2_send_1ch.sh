@@ -6,7 +6,8 @@
 # Updated 20180612
 # Christine L Kuryla
 
-# Takes no parameters. Run in a directory with:
+# Parameter 1: email address for lddmm 
+# Run in a directory with:
 # Template.img Template.hdr Target.img Target.hdr identity.txt LocalAddress.txt lddmm.conf
 
 # Remote LDDMM Processing https://www.mristudio.org/wiki/programmer_manual/remote_processing
@@ -16,7 +17,8 @@
 # Start script
 # *********************************************************
 
-#md5=$1
+# link to lddmm output will be sent to this email address
+myEmail=$1
 
 # zip files together, generate md5 string, name appropriately
 
@@ -29,17 +31,32 @@ md5=`md5sum tmp.zip | awk '{print $1}'`
 # rename tmp.zip to the generated md5 string .zip (as required by lddmm)
 mv tmp.zip ${md5}.zip
 
-ls>filelist
 
-(egrep "*.zip" filelist)>zip_files.txt
+# ------------------------------------------------------------
+# ----- log in and send to lddmm server via ftp 
+# ------------------------------------------------------------
 
-#need to make file with only md5 in it, not done
-(egrep "*.zip" zip_files.txt)>string_name.txt 
+# lddmm server is ftp.mristudio.org
+# name: anonymous
+# password: Kuryla@kennedykrieger.org (or your email)
 
-rm -rf filelist
+echo logging into ftp.mristudio.org
+ftp ftp.mristudio.org
+
+# !!!!!! need to figure out how to put in username and pw
+# user $user $password (see lddmm instructions)
+user anonymous ${myEmail}
+
+echo changing directory and uploading ${md5}.zip
+cd /pub/INCOMING/lddmm-volume/process-queue
+put ${md5}.zip
+
+# see clk evernote for more ideas
+echo ${md5}.zip sent! Just wait for the email! 
 
 
-
+# *********************************************************
+# -----Resources----------
 # *********************************************************
 
 # ------------------------------------------------------------
