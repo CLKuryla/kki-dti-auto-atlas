@@ -4,6 +4,12 @@ thoughts
     - subject id
     - whether it is from the distortion correction step or from the registration step
 
+Note: Starting point is Colleen Buckless' scripts as of 20180525
+They are located: T:\amri\DTIanalysis\Atlasbased_automation\
+Where T is DCN_DATA$(\\KKI-GSPNAS1)
+
+Plan: 
+
 I. Skull Stripping
 ss_dti.sh
 
