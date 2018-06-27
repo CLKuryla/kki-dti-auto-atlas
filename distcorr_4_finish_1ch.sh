@@ -4,7 +4,11 @@
 # Colleen's starting script as of 20180605
 # T:\amri\DTIanalysis\Atlasbased_automation\atlasbased_auto_part2.sh
 
-
+# *********************************************************************
+# Apply lddmm results to b0, then unpad distortion corrected b0
+# apply lddmm results to tensors ?????????
+# GENERATE DISTORTION CORRECTED FA, MD, AD, RD (NOT DONE YET)
+# *********************************************************************
 
 #!/bin/sh
 
